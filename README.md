@@ -6,17 +6,14 @@ See this Stackoverflow question for more info: http://stackoverflow.com/question
 
 There is Boost 1.55.0 partly included in this project (just everything needed for the test is included)
 
-There are 4 types of files in the data directory:
+After using bin/createLinks.bat (run it as administrator), there are 3 files in the data directory:
 * test.txt          -> A non-empty text file
-* WindowsLink.lnk   -> A standard windows link, like you'll have on your desktop after installing something
 * SymLink.txt       -> A symbolic link created with 'mklink SymLink.txt test.txt'
 * HardLink.txt      -> A hard link created with 'mklink /H HardLink.txt test.txt'
 Note that you can open any file simply with notepad.exe and it'll display the text from test.txt.
 
-When running the test on my Windows 7 64bit machine, the results are the following:
+When running the test-program on my Windows 7 64bit machine, the results are the following:
     Checking ../data/test.txt
-    Result: false
-    Checking ../data/WindowsLink.lnk
     Result: false
     Checking ../data/SymLink.txt
     Result: true
