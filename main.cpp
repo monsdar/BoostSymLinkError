@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <string>
 #include <boost/filesystem/operations.hpp>
@@ -13,7 +12,7 @@ void checkFile(const std::string& path)
 int main()
 {
     std::string txtPath  = "../data/test.txt";
-    std::string symPath  = "../data/SymLink.txt";
+    std::string symPath  = "../data/SoftLink.txt";
     std::string hardPath = "../data/HardLink.txt";
 
     checkFile(txtPath);
